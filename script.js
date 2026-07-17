@@ -1,6 +1,11 @@
+console.log("JavaScript Loaded");
+
 const scriptURL = "https://script.google.com/macros/s/AKfycbwcEpNOd_dblC-Qr_SCeXiHXiWNmGdve4AfO9TKOesLSNw238FhV1xBOY46nladqqdu6Q/exec";
 
 document.getElementById("studentForm").addEventListener("submit", function (e) {
+
+    console.log("Submit Clicked");
+
     e.preventDefault();
 
     const formData = new FormData();
@@ -18,13 +23,13 @@ document.getElementById("studentForm").addEventListener("submit", function (e) {
     })
     .then(response => response.text())
     .then(data => {
+        console.log(data);
         alert("Registration Successful!");
-
-        // Redirect to Kerala Results Website
         window.location.href = "https://results.hse.kerala.gov.in/results/";
     })
     .catch(error => {
-        alert("Something went wrong!");
         console.error(error);
+        alert("Something went wrong!");
     });
+
 });
