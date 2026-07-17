@@ -13,7 +13,13 @@
 
 <h1>Student Registration Form</h1>
 
-<form>
+<form
+  name="student-registration"
+  method="POST"
+  data-netlify="true"
+  action="/success.html"
+>
+  <input type="hidden" name="form-name" value="student-registration">
 
 <label>Register Number</label>
 <input type="text" placeholder="Enter Register Number">
