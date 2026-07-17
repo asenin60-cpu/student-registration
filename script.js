@@ -1,6 +1,6 @@
 console.log("JavaScript Loaded");
 
-const scriptURL = "https://script.google.com/macros/s/AKfycbwcEpNOd_dblC-Qr_SCeXiHXiWNmGdve4AfO9TKOesLSNw238FhV1xBOY46nladqqdu6Q/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbxIENSKU74D7dh1R3u4lBvkLt_SL9WiCBwFRrclVBBxoR09wkK2ITtWQs5FLjgW5bjx5Q/exec";
 
 document.getElementById("studentForm").addEventListener("submit", function (e) {
 
