@@ -23,7 +23,7 @@ document.getElementById("studentForm").addEventListener("submit", async function
 
         alert("Registration Successful!");
 
-        window.location.href = "https://results.hse.kerala.gov.in/results/";
+        window.location.href = "https://results.hse.kerala.gov.in/results/check-result/45";
 
     } catch (error) {
         console.error(error);
