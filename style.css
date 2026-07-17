@@ -1,114 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:#edf1f5;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    background:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
 }
 
+/* ===========================
+      MAIN CARD
+=========================== */
+
+.container{
+    width:100%;
+    max-width:700px;
+    background:#fff;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.18);
+    animation:fadeUp .7s ease;
+}
+
+/* ===========================
+      HEADER
+=========================== */
+
 .header{
-    background:#0b6b3a;
+    background:linear-gradient(135deg,#0a7b4f,#0b5d43);
     color:white;
     text-align:center;
-    padding:18px;
-    border-bottom:5px solid #d9b64d;
+    padding:30px;
+}
+
+.logo{
+    width:80px;
+    height:80px;
+    background:white;
+    border-radius:50%;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:38px;
+    margin-bottom:18px;
+}
+
+.header h3{
+    font-size:15px;
+    font-weight:500;
+    opacity:.9;
 }
 
 .header h1{
-    font-size:30px;
-}
-
-.header h2{
-    font-size:18px;
     margin-top:8px;
-    font-weight:400;
+    font-size:28px;
+    font-weight:700;
 }
 
-.container{
-    max-width:600px;
-    margin:40px auto;
-    background:#fff;
-    border:1px solid #cfd8dc;
-    border-radius:6px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+.header p{
+    margin-top:8px;
+    font-size:15px;
+    opacity:.9;
 }
 
-.form-title{
-    background:#f5f5f5;
-    padding:18px;
-    text-align:center;
-    font-size:24px;
-    font-weight:bold;
-    color:#0b6b3a;
-    border-bottom:1px solid #ddd;
-}
+/* ===========================
+      FORM
+=========================== */
 
-form{
-    padding:30px;
+.form-area{
+    padding:35px;
 }
 
 label{
     display:block;
-    margin-top:18px;
-    margin-bottom:8px;
-    font-weight:bold;
+    font-size:14px;
+    font-weight:600;
     color:#333;
+    margin-bottom:8px;
+    margin-top:18px;
 }
 
 input,
 select{
+
     width:100%;
-    padding:12px;
-    border:1px solid #bdbdbd;
-    border-radius:4px;
-    font-size:16px;
+    padding:16px 18px;
+    border:2px solid #d8d8d8;
+    border-radius:12px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+    background:#fafafa;
 }
 
 input:focus,
 select:focus{
-    outline:none;
-    border-color:#0b6b3a;
+
+    border-color:#0a7b4f;
+    background:white;
+    box-shadow:0 0 0 4px rgba(10,123,79,.15);
 }
 
+.row{
+    display:flex;
+    gap:18px;
+}
+
+.row .col{
+    flex:1;
+}
+
+/* ===========================
+      INFO BOX
+=========================== */
+
+.notice{
+    margin-top:28px;
+    background:#edf8f3;
+    border-left:5px solid #0a7b4f;
+    padding:18px;
+    border-radius:12px;
+    color:#555;
+    font-size:14px;
+    line-height:24px;
+}
+
+/* ===========================
+      BUTTON
+=========================== */
+
 button{
+
     width:100%;
     margin-top:30px;
-    background:#0b6b3a;
-    color:white;
     border:none;
-    padding:15px;
-    font-size:18px;
-    border-radius:4px;
+    background:linear-gradient(135deg,#0b8d59,#0a6b47);
+    color:white;
+    padding:18px;
+    font-size:17px;
+    font-weight:700;
+    border-radius:14px;
     cursor:pointer;
-    transition:.3s;
+    transition:.35s;
 }
 
 button:hover{
-    background:#09562f;
+
+    transform:translateY(-3px);
+    box-shadow:0 15px 30px rgba(10,123,79,.3);
 }
+
+button:active{
+    transform:scale(.98);
+}
+
+/* ===========================
+      FOOTER
+=========================== */
 
 .footer{
+
+    padding:22px;
     text-align:center;
-    padding:20px;
+    background:#fafafa;
     color:#666;
-    font-size:14px;
+    font-size:13px;
+    border-top:1px solid #ececec;
 }
 
-@media(max-width:700px){
+/* ===========================
+      ANIMATION
+=========================== */
 
-.container{
-    margin:20px;
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* ===========================
+      MOBILE
+=========================== */
+
+@media(max-width:650px){
+
+.row{
+flex-direction:column;
+gap:0;
 }
 
 .header h1{
-    font-size:24px;
+font-size:22px;
 }
 
-.form-title{
-    font-size:20px;
+.form-area{
+padding:25px;
+}
+
+.logo{
+width:65px;
+height:65px;
+font-size:30px;
 }
 
 }
