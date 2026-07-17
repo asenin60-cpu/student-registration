@@ -1,4 +1,11 @@
-<form id="studentForm">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="studentForm">
 
   <label>Register Number</label>
   <input type="text" id="registerNumber" placeholder="Enter Register Number" required>
@@ -11,14 +18,15 @@
 
   <label>WhatsApp Number</label>
   <input type="tel" id="whatsapp" placeholder="Enter WhatsApp Number" required>
-  <label>Stream</label>
+<label>Stream</label>
 
-    <select id="stream" name="stream" required>
+<select id="stream" name="stream" required>
     <option value="">Select Stream</option>
     <option value="Science">Science</option>
     <option value="Commerce">Commerce</option>
     <option value="Humanities">Humanities</option>
-    </select>
+</select>
+
   <label>District</label>
   <select id="district" required>
       <option value="">Select District</option>
@@ -41,3 +49,6 @@
   <button type="submit">Submit</button>
 
 </form>
+<script src="script.js"></script>
+</body>
+</html>
