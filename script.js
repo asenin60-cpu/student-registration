@@ -9,6 +9,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
     formData.append("dateOfBirth", document.getElementById("dob").value);
     formData.append("studentName", document.getElementById("studentName").value);
     formData.append("whatsappNumber", document.getElementById("whatsapp").value);
+    formData.append("stream", document.getElementById("stream").value);
     formData.append("district", document.getElementById("district").value);
 
     fetch(scriptURL, {
