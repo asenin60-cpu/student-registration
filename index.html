@@ -1,64 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Registration</title>
+<form id="studentForm">
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <label>Register Number</label>
+  <input type="text" id="registerNumber" placeholder="Enter Register Number" required>
 
-<div class="container">
+  <label>Date of Birth</label>
+  <input type="date" id="dob" required>
 
-<h1>Student Registration Form</h1>
+  <label>Student Name</label>
+  <input type="text" id="studentName" placeholder="Enter Student Name" required>
 
-<form
-  name="student-registration"
-  method="POST"
-  data-netlify="true"
-  action="/success.html"
->
-  <input type="hidden" name="form-name" value="student-registration">
+  <label>WhatsApp Number</label>
+  <input type="tel" id="whatsapp" placeholder="Enter WhatsApp Number" required>
 
-<label>Register Number</label>
-<input type="text" placeholder="Enter Register Number">
+  <label>District</label>
+  <select id="district" required>
+      <option value="">Select District</option>
+      <option>Kozhikode</option>
+      <option>Malappuram</option>
+      <option>Kannur</option>
+      <option>Ernakulam</option>
+      <option>Thrissur</option>
+      <option>Palakkad</option>
+      <option>Kottayam</option>
+      <option>Alappuzha</option>
+      <option>Idukki</option>
+      <option>Pathanamthitta</option>
+      <option>Kollam</option>
+      <option>Thiruvananthapuram</option>
+      <option>Kasaragod</option>
+      <option>Wayanad</option>
+  </select>
 
-<label>Date of Birth</label>
-<input type="date">
-
-<label>Student Name</label>
-<input type="text" placeholder="Enter Student Name">
-
-<label>WhatsApp Number</label>
-<input type="tel" placeholder="Enter WhatsApp Number">
-
-<label>District</label>
-
-<select>
-<option>Select District</option>
-<option>Kozhikode</option>
-<option>Malappuram</option>
-<option>Kannur</option>
-<option>Ernakulam</option>
-<option>Thrissur</option>
-<option>Palakkad</option>
-<option>Kottayam</option>
-<option>Alappuzha</option>
-<option>Idukki</option>
-<option>Pathanamthitta</option>
-<option>Kollam</option>
-<option>Thiruvananthapuram</option>
-<option>Kasaragod</option>
-<option>Wayanad</option>
-</select>
-
-<button type="submit">Submit</button>
+  <button type="submit">Submit</button>
 
 </form>
-
-</div>
-
 <script src="script.js"></script>
 
 </body>
