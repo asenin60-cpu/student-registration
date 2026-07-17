@@ -1,4 +1,4 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbx9zJZgfZKC99bj1ow7DBq8zcscBGmO1vmfu0QhefpH3e1NriLNTJnriVc_PLmx6Zyc7w/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbwcEpNOd_dblC-Qr_SCeXiHXiWNmGdve4AfO9TKOesLSNw238FhV1xBOY46nladqqdu6Q/exec";
 
 document.querySelector("form").addEventListener("submit", function (e) {
     e.preventDefault();
