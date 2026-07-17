@@ -1,3 +1,6 @@
+/* ================================
+   GOOGLE FONT
+================================ */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 *{
@@ -8,222 +11,372 @@
 }
 
 body{
+
     min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     padding:40px 20px;
-    background:
-    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
-    url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop");
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
+
+    background:linear-gradient(135deg,
+    #0B2A6B 0%,
+    #174EA6 40%,
+    #2A73D9 100%);
+
+    position:relative;
+    overflow-x:hidden;
 }
 
-/* ===========================
+/* Decorative Background */
+
+body::before{
+
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background-image:
+
+    radial-gradient(circle at 10% 20%,rgba(255,255,255,.10) 2px,transparent 2px),
+    radial-gradient(circle at 80% 30%,rgba(255,255,255,.08) 3px,transparent 3px),
+    radial-gradient(circle at 60% 80%,rgba(255,255,255,.10) 2px,transparent 2px);
+
+    background-size:120px 120px;
+
+    pointer-events:none;
+}
+
+/* ================================
       MAIN CARD
-=========================== */
+================================ */
 
 .container{
+
     width:100%;
-    max-width:700px;
-    background:#fff;
+    max-width:720px;
+
+    background:rgba(255,255,255,.97);
+
+    backdrop-filter:blur(20px);
+
     border-radius:22px;
+
     overflow:hidden;
+
     box-shadow:
-    0 20px 60px rgba(0,0,0,.18);
-    animation:fadeUp .7s ease;
+
+    0 25px 70px rgba(0,0,0,.20);
+
+    animation:fadeUp .8s ease;
+
+    position:relative;
+
+    z-index:5;
+
 }
 
-/* ===========================
+/* ================================
       HEADER
-=========================== */
+================================ */
 
 .header{
-    background:linear-gradient(135deg,#0a7b4f,#0b5d43);
+
+    background:linear-gradient(135deg,#0B2A6B,#174EA6);
+
     color:white;
+
     text-align:center;
-    padding:30px;
+
+    padding:35px;
+
 }
 
 .logo{
-    width:80px;
-    height:80px;
+
+    width:90px;
+
+    height:90px;
+
     background:white;
+
     border-radius:50%;
+
     margin:auto;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
-    font-size:38px;
-    margin-bottom:18px;
+
+    font-size:42px;
+
+    color:#174EA6;
+
+    margin-bottom:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
 }
 
 .header h3{
+
     font-size:15px;
+
     font-weight:500;
+
     opacity:.9;
+
 }
 
 .header h1{
+
+    font-size:30px;
+
     margin-top:8px;
-    font-size:28px;
+
     font-weight:700;
+
 }
 
 .header p{
+
     margin-top:8px;
-    font-size:15px;
+
     opacity:.9;
+
+    font-size:15px;
+
 }
 
-/* ===========================
+/* ================================
       FORM
-=========================== */
+================================ */
 
 .form-area{
+
     padding:35px;
+
 }
 
 label{
+
     display:block;
-    font-size:14px;
-    font-weight:600;
-    color:#333;
-    margin-bottom:8px;
+
     margin-top:18px;
+
+    margin-bottom:8px;
+
+    font-size:14px;
+
+    color:#333;
+
+    font-weight:600;
+
 }
 
 input,
 select{
 
     width:100%;
+
     padding:16px 18px;
-    border:2px solid #d8d8d8;
+
+    border:2px solid #d7dce5;
+
     border-radius:12px;
+
+    background:#f8fafc;
+
     font-size:15px;
-    outline:none;
+
     transition:.3s;
-    background:#fafafa;
+
+    outline:none;
+
 }
 
 input:focus,
 select:focus{
 
-    border-color:#0a7b4f;
+    border-color:#174EA6;
+
     background:white;
-    box-shadow:0 0 0 4px rgba(10,123,79,.15);
+
+    box-shadow:0 0 0 5px rgba(23,78,166,.15);
+
 }
 
 .row{
+
     display:flex;
+
     gap:18px;
+
 }
 
-.row .col{
+.col{
+
     flex:1;
+
 }
 
-/* ===========================
-      INFO BOX
-=========================== */
-
-.notice{
-    margin-top:28px;
-    background:#edf8f3;
-    border-left:5px solid #0a7b4f;
-    padding:18px;
-    border-radius:12px;
-    color:#555;
-    font-size:14px;
-    line-height:24px;
-}
-
-/* ===========================
+/* ================================
       BUTTON
-=========================== */
+================================ */
 
 button{
 
     width:100%;
+
     margin-top:30px;
-    border:none;
-    background:linear-gradient(135deg,#0b8d59,#0a6b47);
-    color:white;
+
     padding:18px;
-    font-size:17px;
-    font-weight:700;
+
+    border:none;
+
     border-radius:14px;
+
+    background:linear-gradient(135deg,#174EA6,#0B2A6B);
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:700;
+
     cursor:pointer;
+
     transition:.35s;
+
+    letter-spacing:.5px;
+
 }
 
 button:hover{
 
-    transform:translateY(-3px);
-    box-shadow:0 15px 30px rgba(10,123,79,.3);
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 18px 35px rgba(23,78,166,.35);
+
 }
 
 button:active{
+
     transform:scale(.98);
+
 }
 
-/* ===========================
+/* ================================
+      NOTICE
+================================ */
+
+.notice{
+
+    margin-top:25px;
+
+    padding:18px;
+
+    border-left:5px solid #174EA6;
+
+    background:#eef5ff;
+
+    border-radius:12px;
+
+    color:#444;
+
+    font-size:14px;
+
+    line-height:24px;
+
+}
+
+/* ================================
       FOOTER
-=========================== */
+================================ */
 
 .footer{
 
-    padding:22px;
+    padding:20px;
+
+    background:#f7f9fc;
+
     text-align:center;
-    background:#fafafa;
+
     color:#666;
+
     font-size:13px;
+
     border-top:1px solid #ececec;
+
 }
 
-/* ===========================
+/* ================================
       ANIMATION
-=========================== */
+================================ */
 
 @keyframes fadeUp{
 
 from{
+
 opacity:0;
-transform:translateY(40px);
+
+transform:translateY(35px);
+
 }
 
 to{
+
 opacity:1;
+
 transform:translateY(0);
-}
 
 }
 
-/* ===========================
-      MOBILE
-=========================== */
+}
 
-@media(max-width:650px){
+/* ================================
+      RESPONSIVE
+================================ */
+
+@media(max-width:700px){
 
 .row{
-flex-direction:column;
-gap:0;
-}
 
-.header h1{
-font-size:22px;
+flex-direction:column;
+
+gap:0;
+
 }
 
 .form-area{
+
 padding:25px;
+
+}
+
+.header{
+
+padding:28px;
+
+}
+
+.header h1{
+
+font-size:24px;
+
 }
 
 .logo{
-width:65px;
-height:65px;
-font-size:30px;
+
+width:70px;
+
+height:70px;
+
+font-size:34px;
+
 }
 
 }
